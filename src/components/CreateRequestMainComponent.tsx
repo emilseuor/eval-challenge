@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react";
-import { Modal, Button, TextInput, Label, Checkbox } from "flowbite-react";
+import { Modal, Button, TextInput, Label } from "flowbite-react";
 import { HiOutlineExclamationCircle, HiPlus, HiX } from "react-icons/hi";
 
 interface CreateRequestMainComponentProps {
@@ -9,11 +9,11 @@ interface CreateRequestMainComponentProps {
 interface IVideoUrlTextbox {
   id: number, 
   // validation: (id: number, value: string) => void, 
-  isValid: string
+  // isValid: string
 }
 
 const VideoUrlTexbox: (props: IVideoUrlTextbox) => ReactNode = (props: IVideoUrlTextbox) => {
-  const { id, /* validation, */ isValid } = props
+  const { id, /* validation, isValid */ } = props
   const [status, setStatus] = useState('none')
 
   const validation = (id: number, value: string) => {
@@ -93,7 +93,7 @@ export function CreateRequestMainComponent(
       <form className="flex max-w-md flex-col gap-4">
         <>
           {videoUrlCount.map(i => (
-            <VideoUrlTexbox id={i.id} /* validation={validate} */ isValid={i.status} />
+            <VideoUrlTexbox id={i.id} /* validation={validate} isValid={i.status} */ />
           ))}
         </>
         <>
@@ -144,7 +144,7 @@ export function CreateRequestMainComponent(
     </>
 
         <div>
-          
+          {/** What was I going to do here? Who knows...  */}
         </div>
       </div>
 
