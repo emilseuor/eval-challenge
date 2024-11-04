@@ -93,7 +93,7 @@ export function CreateRequestMainComponent(
       <form className="flex max-w-md flex-col gap-4">
         <>
           {videoUrlCount.map(i => (
-            <VideoUrlTexbox id={i.id} /* validation={validate} isValid={i.status} */ />
+            <VideoUrlTexbox id={i.id} key={i.id} /* validation={validate} isValid={i.status} */ />
           ))}
         </>
         <>
